@@ -18,7 +18,7 @@ int go(int i, int j) {
     int sum = 0;
     for (int k=i; k<=j; k++) sum += a[k];
 
-    // dp d[i][j] = min(d[i][k] + d[k+1][j]) + sum
+    // d[i][j] = min(d[i][k]) + min(d[k+1][j]) + sum
     int &ans = d[i][j];
     for (int k=i; k<=j-1; k++) {
         int temp = go(i, k) + go(k+1, j) + sum;
