@@ -15,7 +15,9 @@ int main() {
     for (int i=0; i<n; i++) cin >> a[i];
     sort(a, a+n);
 
-    // dp: 
+    // dp:
+    // a[i] = 입력받은 n개의 동전 중 i번째 동전의 가치
+    // d[j] = 가치 j를 만들 수 있는 방법
     // d[j+a[i]] = d[j+a[i]] + d[j]
     d[0] = 1;
     for (int i=0; i<n; i++) {
